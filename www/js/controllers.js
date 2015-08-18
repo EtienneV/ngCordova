@@ -21,6 +21,11 @@ angular.module('starter.controllers', ['ngCordova'])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+
+        $ionicPlatform.ready(function() {
+            alert("ready");
+            $cordovaVibration.vibrate(100);
+        });
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
