@@ -3,6 +3,7 @@ angular.module('starter.controllers', ['ngCordova'])
 .controller('DashCtrl', function($scope, $cordovaVibration) {
 
       $ionicPlatform.ready(function() {
+          alert("ready");
         $cordovaVibration.vibrate(100);
       });
     })
