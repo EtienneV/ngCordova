@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['ngCordova'])
 
-.controller('DashCtrl', function($scope, $cordovaVibration) {
+.controller('DashCtrl', function($ionicPlatform, $scope, $cordovaVibration) {
 
       $ionicPlatform.ready(function() {
           alert("ready");
@@ -21,11 +21,6 @@ angular.module('starter.controllers', ['ngCordova'])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
-
-        $ionicPlatform.ready(function() {
-            alert("ready");
-            $cordovaVibration.vibrate(100);
-        });
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
